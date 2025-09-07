@@ -1,15 +1,34 @@
+# Ejecutar dos ventanas de CMD
+
 py -m venv .venv
-.\.venv\Scripts\Activate.ps1
+.\.venv\Scripts\activate.bat
 pip install --upgrade pip
+pip install rich
 
-# solo si se usa la TUI
-pip install rich  
-py .\main.py
 
-# catalog_list
-py .\client\cli_client.py --method catalog_list
 
-# select_bearing (ejemplo)
-py .\client\cli_client.py --method select_bearing --params "{""Fr_N"":3500,""Fa_N"":1200,""rpm"":1800,""L10h_target"":12000,""reliability_percent"":90,""temperature_C"":40,""lubrication"":""grease""}"
+# Primera ventana
+.\.venv\Scripts\activate.bat
+py main.py
 
-py .\ui\tui.py
+
+
+# Segunda ventana
+.\.venv\Scripts\activate.bat
+
+py client\cli_client.py --method catalog_list
+py client\cli_client.py --method select_bearing --params "{""Fr_N"":3500,""Fa_N"":1200,""rpm"":1800,""L10h_target"":12000,""reliability_percent"":90,""temperature_C"":40,""lubrication"":""grease""}"
+py client\cli_client.py --method verify_point --params "{""model"":""NTN_6205C3"",""Fr_N"":3000,""Fa_N"":800,""rpm"":1500,""reliability_percent"":90,""temperature_C"":40,""lubrication"":""grease"",""L10h_target"":10000}"
+
+
+# Usando la UI
+py ui\tui.py
+
+
+
+# Logs y validación rápida
+type logs\server.log
+
+# Tests unitarios
+pip install pytest
+pytest -q

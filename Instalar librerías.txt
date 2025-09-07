@@ -1,2 +1,0 @@
-pip install --upgrade pip
-pip install rich  # solo si se usa la TUI
