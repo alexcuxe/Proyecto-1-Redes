@@ -1,0 +1,32 @@
+bearingpro_mcp/
+│
+├─ main.py                     # Servidor JSON-RPC (STDIO)
+├─ rpc_handler.py              # Framing Content-Length + router JSON-RPC 2.0
+├─ logger.py                   # Logger simple (archivo y consola)
+│
+├─ tools/
+│  ├─ __init__.py
+│  ├─ select_bearing.py        # Selección
+│  ├─ verify_point.py          # Verificación de modelo
+│  └─ catalog_list.py          # Lista de catálogo
+│
+├─ models/
+│  ├─ bearing.py
+│  ├─ calculator.py
+│  └─ constants.py
+│
+├─ catalog/
+│  └─ catalog.json             # DEMO (reemplazable por datos reales o API)
+│
+├─ client/
+│  ├─ stdio_client.py          # Cliente JSON-RPC que lanza el server por subproceso
+│  └─ cli_client.py            # CLI de prueba (host mínimo) + logging de interacciones
+│
+├─ ui/
+│  └─ tui.py                   # UI opcional (TUI con Rich) → punto extra
+│
+├─ tests/
+│  ├─ test_calculator.py
+│  └─ test_select.py
+│
+└─ README.md                   # Especificación, instalación y ejemplos (EN)
