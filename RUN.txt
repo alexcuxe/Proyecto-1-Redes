@@ -1,0 +1,15 @@
+py -m venv .venv
+.\.venv\Scripts\Activate.ps1
+pip install --upgrade pip
+
+# solo si se usa la TUI
+pip install rich  
+py .\main.py
+
+# catalog_list
+py .\client\cli_client.py --method catalog_list
+
+# select_bearing (ejemplo)
+py .\client\cli_client.py --method select_bearing --params "{""Fr_N"":3500,""Fa_N"":1200,""rpm"":1800,""L10h_target"":12000,""reliability_percent"":90,""temperature_C"":40,""lubrication"":""grease""}"
+
+py .\ui\tui.py
