@@ -7,3 +7,19 @@
 [2025-09-20 23:47:09,908] INFO - >>> catalog_list {}
 [2025-09-20 23:47:09,908] INFO - <<< catalog_list OK
 [2025-09-20 23:47:09,915] INFO - EOF or invalid frame. Exiting.
+[2025-09-21 01:29:52,738] INFO - Server started and waiting for requests...
+[2025-09-21 01:30:19,381] INFO - Server started and waiting for requests...
+[2025-09-21 01:30:19,381] INFO - >>> ping {}
+[2025-09-21 01:30:19,382] INFO - <<< ping OK
+[2025-09-21 01:30:19,389] INFO - EOF or invalid frame. Exiting.
+[2025-09-21 01:30:21,584] INFO - Server started and waiting for requests...
+[2025-09-21 01:30:21,584] INFO - >>> catalog_list {}
+[2025-09-21 01:30:21,584] INFO - <<< catalog_list OK
+[2025-09-21 01:30:21,594] INFO - EOF or invalid frame. Exiting.
+[2025-09-21 01:44:46,756] INFO - Server started and waiting for requests...
+[2025-09-21 01:45:45,324] INFO - >>> select_bearing {'Fr_N': 4500.0, 'Fa_N': 3000.0, 'rpm': 1750.0, 'L10h_target': 15000.0, 'reliability_percent': 95, 'temperature_C': 40.0, 'lubrication': 'oil'}
+[2025-09-21 01:45:45,325] INFO - <<< select_bearing OK
+[2025-09-21 01:46:11,366] INFO - >>> ping {}
+[2025-09-21 01:46:11,366] INFO - <<< ping OK
+[2025-09-21 02:04:41,521] INFO - Server started and waiting for requests...
+[2025-09-21 02:04:44,793] INFO - EOF or invalid frame. Exiting.
