@@ -1,0 +1,9 @@
+[2025-09-20 23:45:31,223] INFO - Server started and waiting for requests...
+[2025-09-20 23:47:00,788] INFO - Server started and waiting for requests...
+[2025-09-20 23:47:00,788] INFO - >>> ping {}
+[2025-09-20 23:47:00,788] INFO - <<< ping OK
+[2025-09-20 23:47:00,797] INFO - EOF or invalid frame. Exiting.
+[2025-09-20 23:47:09,908] INFO - Server started and waiting for requests...
+[2025-09-20 23:47:09,908] INFO - >>> catalog_list {}
+[2025-09-20 23:47:09,908] INFO - <<< catalog_list OK
+[2025-09-20 23:47:09,915] INFO - EOF or invalid frame. Exiting.
