@@ -1,33 +1,17 @@
-# Ejecutar dos ventanas de CMD
 
+******************** NUEVAS INSTRUCCIONES
 py -m venv .venv
 .\.venv\Scripts\activate.bat
-pip install --upgrade pip
-pip install rich
-
-
-
-# Primera ventana
-.\.venv\Scripts\activate.bat
-py main.py
-
-
-
-# Segunda ventana
-.\.venv\Scripts\activate.bat
-
-py client\cli_client.py --method ping
-py client\cli_client.py --method catalog_list
-
-
-# Usando la UI
 py -m ui.tui
 
 
 
-# Logs y validación rápida
-type logs\server.log
 
-# Tests unitarios
-pip install pytest
-pytest -q
+
+
+
+.\.venv\Scripts\activate.bat
+pip install rich requests
+
+set CROESUS_API_KEY=TU_API_KEY
+py -m host.chat

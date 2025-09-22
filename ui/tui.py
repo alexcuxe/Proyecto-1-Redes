@@ -50,6 +50,11 @@ def main():
                     params["L10h_target"] = float(target)
                 resp = client.call("verify_point", params)
                 console.print(resp)
+            elif choice == "5":  # new menu item
+                brand = Prompt.ask("brand_code", default="FAG")
+                desig = Prompt.ask("non_skf_designation", default="6205")
+                resp = client.call("croesus_xref", {"brand_code": brand, "non_skf_designation": desig})
+                console.print(resp)
             else:
                 resp = client.call("ping", {})
                 console.print(resp)

@@ -12,6 +12,16 @@ from logger import get_logger
 from tools.select_bearing import tool_select_bearing
 from tools.verify_point import tool_verify_point
 from tools.catalog_list import tool_catalog_list
+from tools.croesus_xref import tool_croesus_xref
+
+methods = {
+    "select_bearing": tool_select_bearing,
+    "verify_point": tool_verify_point,
+    "catalog_list": tool_catalog_list,
+    "croesus_xref": tool_croesus_xref,   # <--- NUEVO
+    "ping": lambda params: {"pong": True},
+}
+
 
 def main():
     log = get_logger("server")
