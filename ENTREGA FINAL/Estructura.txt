@@ -1,20 +1,49 @@
 tu-repo/
 ├─ host/
 │  ├─ __init__.py
-│  ├─ chat.py                 # Chat conversacional con LLM + orquestación official servers
-│  └─ llm_anthropic.py        # Wrapper Anthropic (LLM) con contexto
+│  ├─ chat.py                 # Console chat: LLM on/off + planner + MCP local/remote
+│  └─ llm_anthropic.py        # Anthropic wrapper (simple context chat)
 │
 ├─ client/
 │  ├─ __init__.py
-│  ├─ stdio_client.py         # JSON-RPC por STDIO (binario, robusto en Windows)
-│  └─ official_clients.py     # tools/list + tools/call para Filesystem/Git
+│  ├─ stdio_client.py         # JSON-RPC over STDIO (binary framing, Windows-friendly)
+│  ├─ official_clients.py     # Official MCP servers (Filesystem/Git) helpers
+│  ├─ local_clients.py        # Local MCP helpers (e.g., BearingPro select/verify/catalog)
+│  └─ remote_clients.py       # Remote MCP helpers (HTTP/Cloud Run)
+│
+├─ local_servers/
+│  └─ bearingpro/
+│     ├─ main.py              # MCP server via STDIO: initialize + tools/call
+│     ├─ bearing_utils.py     # Mechanical formulas (demo; replace with ISO later)
+│     ├─ catalog.json         # Extendable catalog (no code changes needed)
+│     └─ README.md            # Usage and tool specs (EN)
+│
+├─ remote_mcp_server/
+│  ├─ app.py                  # HTTP JSON-RPC endpoint /mcp (Cloud Run friendly)
+│  ├─ requirements.txt        # Flask + Gunicorn
+│  ├─ Dockerfile              # Container for Cloud Run
+│  └─ README.md               # Build/Deploy instructions (EN)
 │
 ├─ config/
-│  └─ official_tools_map.json # Rellenas con nombres reales tras “discover”
+│  └─ official_tools_map.json # Names/args for official servers mapping
 │
 ├─ scripts/
-│  └─ discover_official_tools.py  # Descubre tools / schemas de cada server oficial
+│  ├─ discover_official_tools.py  # List tools/schemas from official servers
+│  ├─ fs_direct_test.py           # Smoke test for Filesystem MCP (stdio)
+│  └─ remote_smoke.py             # Smoke test for remote MCP (HTTP)
+│
+├─ docs/
+│  ├─ img/                        # Wireshark screenshots (insert your PNGs here)
+│  │  ├─ cap1_sni_handshake.png
+│  │  ├─ cap2_tcp_3way.png
+│  │  ├─ cap3_tls_handshake_clientHello.png
+│  │  ├─ cap3_tls_handshake_serverHello.png
+│  │  └─ cap4y5_equivalente_quic.png
+│  └─ artifacts/
+│     └─ mcp_cloudRun_stream_22648.pcapng   # Optional: captured stream
 │
 ├─ logs/
-│  (se crea en runtime)
-└─ README.md  (lo llenamos luego)
+│  (created at runtime)
+│
+├─ README.md                    # EN – features, install, usage (for the repo)
+└─ REPORTE_PROYECTO_MCP.md      # ES – final report (or Reporte_MCP_Template.html to export .docx)
