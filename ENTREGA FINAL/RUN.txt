@@ -1,27 +1,20 @@
-
-py -m venv .venv
+python.exe -m venv .venv
 .\.venv\Scripts\activate.bat
 python.exe -m pip install --upgrade pip
 pip install anthropic
 
-set ANTHROPIC_API_KEY=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
+set ANTHROPIC_API_KEY=sk-ant-...
 set ANTHROPIC_MODEL=claude-opus-4-1-20250805
 
 
 set BEARINGPRO_CMD=python local_servers/bearingpro/main.py
 
 
-************************************************************
-gcloud run services proxy mcp-server --region us-central1
-uv run test_server.py
-************************************************************
-
-
-
-set PROJECT_ID=neon-partition-473003-a4
+set PROJECT_ID=myIDproject
 set REGION=us-central1
 set SVC_NAME=remote-mcp
-gcloud builds submit --tag gcr.io/%PROJECT_ID%/%SVC_NAME%
+gcloud builds submit .\remote_mcp_server --tag gcr.io/%PROJECT_ID%/%SVC_NAME%
+
 
 
 gcloud run deploy %SVC_NAME% ^
@@ -30,6 +23,11 @@ gcloud run deploy %SVC_NAME% ^
   --region %REGION% ^
   --allow-unauthenticated
 
-set REMOTE_MCP_URL=https://remote-mcp-510455560434.us-central1.run.app/mcp
+set REMOTE_MCP_URL=https://remote-mcp-...
+
+
+
+py -m pip install requests
+py -m pip install colorama
 
 py -m host.chat
