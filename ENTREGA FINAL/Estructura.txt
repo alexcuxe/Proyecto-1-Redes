@@ -1,0 +1,20 @@
+tu-repo/
+├─ host/
+│  ├─ __init__.py
+│  ├─ chat.py                 # Chat conversacional con LLM + orquestación official servers
+│  └─ llm_anthropic.py        # Wrapper Anthropic (LLM) con contexto
+│
+├─ client/
+│  ├─ __init__.py
+│  ├─ stdio_client.py         # JSON-RPC por STDIO (binario, robusto en Windows)
+│  └─ official_clients.py     # tools/list + tools/call para Filesystem/Git
+│
+├─ config/
+│  └─ official_tools_map.json # Rellenas con nombres reales tras “discover”
+│
+├─ scripts/
+│  └─ discover_official_tools.py  # Descubre tools / schemas de cada server oficial
+│
+├─ logs/
+│  (se crea en runtime)
+└─ README.md  (lo llenamos luego)

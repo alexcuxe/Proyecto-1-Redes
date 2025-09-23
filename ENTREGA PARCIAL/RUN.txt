@@ -12,6 +12,7 @@ py -m ui.tui
 
 .\.venv\Scripts\activate.bat
 pip install rich requests
+pip install anthropic
 
 set CROESUS_API_KEY=TU_API_KEY
 py -m host.chat

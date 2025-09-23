@@ -1,0 +1,48 @@
+
+py -m venv .venv
+.\.venv\Scripts\activate.bat
+python.exe -m pip install --upgrade pip
+pip install anthropic
+
+set ANTHROPIC_API_KEY=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
+set ANTHROPIC_MODEL=claude-opus-4-1-20250805
+py -m host.chat
+
+
+¿Quién fue Alan Turing?
+¿Y su fecha de nacimiento?
+
+
+
+
+set OFFICIAL_FS_CMD=npx @modelcontextprotocol/server-filesystem
+set OFFICIAL_GIT_CMD=npx @modelcontextprotocol/server-git
+
+
+
+py -m scripts.discover_official_tools --server fs
+py -m scripts.discover_official_tools --server git
+
+
+crear repo
+# ingresa ruta y contenido de README — valida que se crea el repo, el archivo, add y commit
+
+
+
+
+
+
+*******************************
+Para Filesystem
+*******************************
+
+set OFFICIAL_FS_CMD=npx -y @modelcontextprotocol/server-filesystem C:\Users\Cris\Downloads\prueba C:\Temp
+
+
+
+
+
+
+********* nuevo chat ***********
+
+set BEARINGPRO_CMD=python local_servers/bearingpro/main.py

@@ -1,0 +1,71 @@
+{
+  "filesystem": {
+    "read_text_file": {
+      "tool_name": "read_text_file",
+      "arg_keys": ["path", "head", "tail"]
+    },
+    "read_media_file": {
+      "tool_name": "read_media_file",
+      "arg_keys": ["path"]
+    },
+    "read_multiple_files": {
+      "tool_name": "read_multiple_files",
+      "arg_keys": ["paths"]
+    },
+    "write_file": {
+      "tool_name": "write_file",
+      "arg_keys": ["path", "content"]
+    },
+    "edit_file": {
+      "tool_name": "edit_file",
+      "arg_keys": ["path", "edits", "dryRun"]
+    },
+    "create_directory": {
+      "tool_name": "create_directory",
+      "arg_keys": ["path"]
+    },
+    "list_directory": {
+      "tool_name": "list_directory",
+      "arg_keys": ["path"]
+    },
+    "list_directory_with_sizes": {
+      "tool_name": "list_directory_with_sizes",
+      "arg_keys": ["path", "sortBy"]
+    },
+    "move_file": {
+      "tool_name": "move_file",
+      "arg_keys": ["source", "destination"]
+    },
+    "search_files": {
+      "tool_name": "search_files",
+      "arg_keys": ["path", "pattern", "excludePatterns"]
+    },
+    "directory_tree": {
+      "tool_name": "directory_tree",
+      "arg_keys": ["path", "excludePatterns"]
+    },
+    "get_file_info": {
+      "tool_name": "get_file_info",
+      "arg_keys": ["path"]
+    },
+    "list_allowed_directories": {
+      "tool_name": "list_allowed_directories",
+      "arg_keys": []
+    }
+  },
+  "git": {
+    "status":         { "tool_name": "git_status",         "arg_keys": ["repo_path"] },
+    "diff_unstaged":  { "tool_name": "git_diff_unstaged",  "arg_keys": ["repo_path", "context_lines"] },
+    "diff_staged":    { "tool_name": "git_diff_staged",    "arg_keys": ["repo_path", "context_lines"] },
+    "diff":           { "tool_name": "git_diff",           "arg_keys": ["repo_path", "target", "context_lines"] },
+    "commit":         { "tool_name": "git_commit",         "arg_keys": ["repo_path", "message"] },
+    "add":            { "tool_name": "git_add",            "arg_keys": ["repo_path", "files"] },
+    "reset":          { "tool_name": "git_reset",          "arg_keys": ["repo_path"] },
+    "log":            { "tool_name": "git_log",            "arg_keys": ["repo_path", "max_count", "start_timestamp", "end_timestamp"] },
+    "create_branch":  { "tool_name": "git_create_branch",  "arg_keys": ["repo_path", "branch_name", "start_point"] },
+    "checkout":       { "tool_name": "git_checkout",       "arg_keys": ["repo_path", "branch_name"] },
+    "show":           { "tool_name": "git_show",           "arg_keys": ["repo_path", "revision"] },
+    "init":           { "tool_name": "git_init",           "arg_keys": ["repo_path"] },
+    "branch":         { "tool_name": "git_branch",         "arg_keys": ["repo_path", "branch_type", "contains", "not_contains"] }
+  }
+}

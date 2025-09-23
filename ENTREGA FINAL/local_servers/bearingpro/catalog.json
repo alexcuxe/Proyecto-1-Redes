@@ -1,0 +1,34 @@
+{
+  "source": "DEMO catalog. NTN/SKF official data.",
+  "bearings": [
+    { "model": "NTN_6204C3", "type": "deep_groove_ball", "C_N": 19500, "d_mm": 20, "D_mm": 47, "B_mm": 14 },
+    { "model": "NTN_6205C3", "type": "deep_groove_ball", "C_N": 23200, "d_mm": 25, "D_mm": 52, "B_mm": 15 },
+    { "model": "NTN_6206C3", "type": "deep_groove_ball", "C_N": 26900, "d_mm": 30, "D_mm": 62, "B_mm": 16 },
+    { "model": "NTN_6207C3", "type": "deep_groove_ball", "C_N": 30500, "d_mm": 35, "D_mm": 72, "B_mm": 17 },
+    { "model": "NTN_6205LLU", "type": "deep_groove_ball", "C_N": 22000, "d_mm": 25, "D_mm": 52, "B_mm": 15 },
+    { "model": "NTN_6305C3", "type": "deep_groove_ball", "C_N": 30500, "d_mm": 25, "D_mm": 62, "B_mm": 17 },
+    { "model": "NTN_6306C3", "type": "deep_groove_ball", "C_N": 35500, "d_mm": 30, "D_mm": 72, "B_mm": 19 },
+    { "model": "NTN_6307C3", "type": "deep_groove_ball", "C_N": 40500, "d_mm": 35, "D_mm": 80, "B_mm": 21 },
+    { "model": "NTN_6308C3", "type": "deep_groove_ball", "C_N": 45500, "d_mm": 40, "D_mm": 90, "B_mm": 23 },
+    { "model": "NTN_6310C3", "type": "deep_groove_ball", "C_N": 55500, "d_mm": 50, "D_mm": 110, "B_mm": 27 },
+    { "model": "NTN_6312C3", "type": "deep_groove_ball", "C_N": 65500, "d_mm": 60, "D_mm": 130, "B_mm": 31 },
+
+    { "model": "SKF_6004",   "type": "deep_groove_ball", "C_N": 17000, "d_mm": 20, "D_mm": 42, "B_mm": 12 },
+    { "model": "SKF_6005",   "type": "deep_groove_ball", "C_N": 20000, "d_mm": 25, "D_mm": 47, "B_mm": 12 },
+
+    { "model": "SKF_6204",   "type": "deep_groove_ball", "C_N": 19000, "d_mm": 20, "D_mm": 47, "B_mm": 14 },
+    { "model": "SKF_6205",   "type": "deep_groove_ball", "C_N": 22000, "d_mm": 25, "D_mm": 52, "B_mm": 15 },
+    { "model": "SKF_6206",   "type": "deep_groove_ball", "C_N": 26000, "d_mm": 30, "D_mm": 62, "B_mm": 16 },
+    { "model": "SKF_6207",   "type": "deep_groove_ball", "C_N": 30000, "d_mm": 35, "D_mm": 72, "B_mm": 17 },
+    { "model": "SKF_6205_2RS", "type": "deep_groove_ball", "C_N": 21500, "d_mm": 25, "D_mm": 52, "B_mm": 15 },
+    { "model": "SKF_6305",   "type": "deep_groove_ball", "C_N": 30000, "d_mm": 25, "D_mm": 62, "B_mm": 17 },
+    { "model": "SKF_6306",   "type": "deep_groove_ball", "C_N": 35000, "d_mm": 30, "D_mm": 72, "B_mm": 19 },
+    { "model": "SKF_6307",   "type": "deep_groove_ball", "C_N": 40000, "d_mm": 35, "D_mm": 80, "B_mm": 21 },
+    { "model": "SKF_6308",   "type": "deep_groove_ball", "C_N": 45000, "d_mm": 40, "D_mm": 90, "B_mm": 23 },
+    { "model": "SKF_6310",   "type": "deep_groove_ball", "C_N": 55000, "d_mm": 50, "D_mm": 110, "B_mm": 27 },
+    { "model": "SKF_6312",   "type": "deep_groove_ball", "C_N": 65000, "d_mm": 60, "D_mm": 130, "B_mm": 31 },
+
+    { "model": "FAG_6004",   "type": "deep_groove_ball", "C_N": 18000, "d_mm": 20, "D_mm": 42, "B_mm": 12 },
+    { "model": "FAG_6005",   "type": "deep_groove_ball", "C_N": 20000, "d_mm": 25, "D_mm": 47, "B_mm": 12 }
+  ]
+}

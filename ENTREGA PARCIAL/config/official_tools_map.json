@@ -1,0 +1,13 @@
+{
+  "filesystem": {
+    "write_file": {
+      "method": "fs.writeFile", 
+      "params": ["path", "content"]
+    }
+  },
+  "git": {
+    "init":   { "method": "git.init",   "params": ["path"] },
+    "add":    { "method": "git.add",    "params": ["path"] },
+    "commit": { "method": "git.commit", "params": ["message"] }
+  }
+}
