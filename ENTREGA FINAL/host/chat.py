@@ -10,6 +10,8 @@ from typing import List, Dict, Any
 # ADD: planner helpers and MCP local clients
 import re, json
 from client.local_clients import bearingpro_select, bearingpro_verify, bearingpro_catalog
+# ADD: remote MCP client
+from client.remote_clients import initialize as remote_init, remote_echo, remote_time, remote_add
 
 
 # LLM wrapper
@@ -290,6 +292,47 @@ def main():
             ctx_llm.append({"role":"user","content":user})
             ctx_llm.append({"role":"assistant","content":answer})
             continue
+
+
+                # Remote MCP: initialize
+        if user.lower().startswith(("remoto init","remote init","mcp remoto init")):
+            try:
+                out = remote_init()
+                print("Host (Remote):", json.dumps(out, ensure_ascii=False, indent=2))
+                log(f"RESP(REMOTE.init): {pretty(out)}")
+            except Exception as e:
+                print("Host (Remote): error ->", e)
+            continue
+
+        # Remote MCP: echo
+        if user.lower().startswith(("remoto echo","remote echo")):
+            txt = user.split(" ", 2)[-1] if " " in user else ""
+            out = remote_echo(txt)
+            print("Host (Remote):", json.dumps(out, ensure_ascii=False, indent=2))
+            log(f"RESP(REMOTE.echo): {pretty(out)}")
+            continue
+
+        # Remote MCP: time
+        if user.lower().strip() in {"remoto hora","remoto time","remote time"}:
+            out = remote_time()
+            print("Host (Remote):", json.dumps(out, ensure_ascii=False, indent=2))
+            log(f"RESP(REMOTE.time): {pretty(out)}")
+            continue
+
+        # Remote MCP: add
+        if user.lower().startswith(("remoto suma","remote add")):
+            # expected pattern: "remoto suma 3 4"
+            parts = user.split()
+            try:
+                a = float(parts[-2]); b = float(parts[-1])
+            except Exception:
+                print("Host (Remote): usa 'remoto suma 3 4'")
+                continue
+            out = remote_add(a, b)
+            print("Host (Remote):", json.dumps(out, ensure_ascii=False, indent=2))
+            log(f"RESP(REMOTE.add): {pretty(out)}")
+            continue
+
 
 
 
